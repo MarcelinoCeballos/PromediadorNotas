@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ingresoClave {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;  
+    width: 500px;
+    height: 800px;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+    margin-top: 100px; 
+}
+.boxPromediadorItself {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.materia {
+    display: none;
+    margin-top: 50px; 
+}
+.alumno {
+    display: none;
+    margin-top: 50px; 
+}
+.notas {
+    display: none;
+    margin-top: 50px;
+}
+.nuevo_alumno {
+    display: none;
+    margin-top: 50px;
+}
+.fetch {
+    display: none;
+}
