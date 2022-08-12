@@ -21,40 +21,48 @@
                 </div>
             </div>
         </section>
-        <section class="boxPromediadorItself"> <!-- SECCION ELECCION MATERIA -->
+        <section class="boxPromediadorItself"> 
+<!-- SECCION ELECCION MATERIA -->       
             <div class="materia">
-                <h1 class="login_saludo">Seleccione materia</h1>
+                <h1 class="materia_saludo">Seleccione materia</h1>
                 <br>
-                <div class="materia_seleccion">
-                    <select name="selector" id="materia_selector">
-                        <option selected>Seleccione materia</option>
-                        <option class="materia_seleccion-plantas" value="plantas">Plantas</option>
-                        <option class="materia_seleccion-estructura" value="estructura">Estructura</option>                   
-                    </select>
-                    <button class="materia_boton">Seleccionar</button>
-                </div>
-            </div>
-
-            <div class="alumno"> <!-- SECCION ELECCION ALUMNO -->
-                <h1 class="alumno_titulo">Seleccione Alumno</h1> 
                 <br>
-                <select name="alumno_selector" id="alumno_selector-nombre">
-                    <option selected>Seleccione alumno</option>
-                    <option class="alumno_seleccion-alumno" value="1">Ceballos Marcelino</option>                   
+                <select name="selector" id="materia_seleccion">
+                    <option selected>Seleccione materia</option>
+                    <option class="materia_seleccion" value="1">Plantas</option>
+                    <option class="materia_seleccion" value="2">Estructura</option>                   
                 </select>
-                <button class="alumno_boton">Seleccionar</button>
             </div>
 
-
-            <div class = "notas"><!-- SECCION INGRESO NOTAS -->
+<!-- SECCION ELECCION ALUMNO PLANTAS -->
+            <div class="alumnoPlantas"> 
+                <h1 class="alumno_titulo">Plantas 1. Seleccione Alumno</h1> 
+                <br>
+                <select name="alumno_seleccion" id="alumno_seleccion-plantas">
+                    <option selected>Seleccione alumno</option>
+                    <option class="alumno_seleccion" value="1">Ceballos Marcelino</option>                   
+                </select>               
+            </div>
+<!-- SECCION ELECCION ALUMNO ESTRUCTURA -->
+            <div class="alumnoEstructura"> 
+                <h1 class="alumno_titulo">Estructura 1. Seleccione Alumno</h1> 
+                <br>
+                <select name="alumno_selecccion" id="alumno_seleccion-estructura">
+                    <option selected>Seleccione alumno</option>
+                    <option class="alumno_seleccion" value="1">Perazzi Javier</option>                   
+                </select>               
+            </div>
+<!-- SECCION INGRESO NOTAS -->
+            <div class = "notas">
                 <h1 class="notas_bienvenida"> Ingrese notas a promediar</h1>
                 <br>
                 <input class= "notas_ingresar" type="number" placeholder="Ingrese nota">
                 <button class="notas_boton">Promediar</button>
                 <br>
+                <br>
                 <div class = "promedio"></div>
                     <h2 class="notas_promedio-bienvendia">Promedio</h2>
-                    <input class= "notas_promedio-final" type="number">
+                    <p class= "notas_promedio-final" type="number"></p>
                 </div>
             </div>
 |
@@ -73,37 +81,9 @@
                 <h1 class="meteorologiaHoy">Temperatura Hoy en Mendoza</h1>
                 <p class="meteorologiaDato"> °C</p>              
             </div>
-        </section>
-
-            
-            <!-- <div>
-                <label>Nombre alumno</label>
-                <input type="text" placeholder="Ingrese nombre alumno">                 
-            </div>
-            <br>
-            <div>
-                <label>Apellido alumno</label>
-                <input type="text" placeholder="Ingrese apellido alumno">                 
-            </div> -->
-            
-<!--             
-            <br>
-            <div>
-                <label>Ingrese notas a promediar</label>
-                <input type="number" placeholder="Ingrese notas">             
-                <button type="submit" class="btn btn-primary">Ingresar nota</button>
-                <button type="submit" class="btn btn-primary">Promediar notas</button>
-            </div> -->
-
-            <!-- <p class="promedioFinal"></p>                              -->
-        
-    </main>
-    
-    <!-- <script src="./js/ejercicioClase3.js"></script> -->
-    <script src="./js/entregable4.js"></script>
-    <script src="./js/prueba.js"></script>
-    <!-- <script src="./js/borrador.js"></script> -->
-    <!-- <script src="./js/nuevosAlumnos.js"></script> -->
+        </section>       
+    </main>  
+    <script src="./js/entregable.js"></script>      
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

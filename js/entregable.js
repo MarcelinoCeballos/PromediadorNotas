@@ -21,51 +21,66 @@ El sistema tiene registrado un alumno.
 
 // SECCION CONTRASEÑA
 
- let clave = "2277"; // La contraseña establecida es 2277
+let clave = "2277"; // La contraseña establecida es 2277
 
- document.querySelector(".clave_boton").addEventListener("click", function() { // Linkeo el click del botón para ocasionar el evento
-     let claveIngresada = document.querySelector(".clave_ingreso").value; // Creo la variable y le asigno el valor que se ingrese
+document.querySelector(".clave_boton").addEventListener("click", function() { // Linkeo el click del botón para ocasionar el evento
+    let claveIngresada = document.querySelector(".clave_ingreso").value; // Creo la variable y le asigno el valor que se ingrese
 
-     if(claveIngresada === clave) { // Si la clave coincide...
+    if(claveIngresada === clave) { // Si la clave coincide...
         Toastify({
             text: "Clave Correcta",
             duration: 3000
         }).showToast();
 
-         document.querySelector(".login").style.display = "none";
-         document.querySelector(".materia").style.display = "inline-block";
-         document.querySelector(".alumno").style.display = "inline-block";
-         document.querySelector(".notas").style.display = "inline-block";
-         document.querySelector(".nuevo_alumno").style.display = "inline-block";
-         document.querySelector(".fetch").style.display = "inline-block";
-     } else {
+        document.querySelector(".login").style.display = "none";
+        document.querySelector(".materia").style.display = "inline-block";
+    } else {
         document.querySelector(".clave_ingreso").value = "";
-     }
- });    
-
-
+    }
+});    
 //  SELECCION MATERIA 
-document.querySelector(".materia_boton").addEventListener("click", function() {
-    let materiaIngresada = document.querySelector("#materia_selector").value;
+let plantas = "1"; 
+let estructura = "2";
+
+document.querySelector("#materia_seleccion").addEventListener("change", function() {
+    let materiaIngresada = document.querySelector("#materia_seleccion").value;
     console.log(materiaIngresada);
     
-    if (materiaIngresada === "plantas") { // Si se elige Plantas...
-        document.querySelector(".plantas").style.display = "inline-block";
-    } else if (materiaIngresada === "estructura") { 
-        document.querySelector(".estructura").style.display = "inline-block";
+    if (materiaIngresada === plantas) { // Si se elige Plantas...
+        document.querySelector(".alumnoPlantas").style.display = "inline-block";
+        document.querySelector(".alumnoEstructura").style.display = "none";
+    } else if (materiaIngresada === estructura) { 
+        document.querySelector(".alumnoEstructura").style.display = "inline-block";
+        document.querySelector(".alumnoPlantas").style.display = "none";
+    } else if ((materiaIngresada != plantas) || (materiaIngresada != estructura)) {
+        document.querySelector(".materia_seleccion").value = "";
     }
 })
 
-
 //  SELECCION ALUMNO 
-document.querySelector(".alumno_boton").addEventListener("click", function() {
-    let alumnoSeleccionado = document.querySelector(".alumno_seleccion-alumno").value;
+let alumnoPlantas = "1";
+let alumnoEstructura = "2";
+
+document.querySelector("#alumno_seleccion-plantas").addEventListener("change", function() {
+    let alumnoSeleccionado = document.querySelector("#alumno_seleccion-plantas").value;
     console.log(alumnoSeleccionado);
     
-    if (alumnoSeleccionado === "1") {
+    if ((alumnoSeleccionado === "1") || (alumnoSeleccionado === "2")) {
         document.querySelector(".notas").style.display = "inline-block";
     } else {
+        ((alumnoSeleccionado != "1") || (alumnoSeleccionado != "2"))
+        document.querySelector(".materia").value = "";
+    }
+});
+document.querySelector("#alumno_seleccion-estructura").addEventListener("change", function() {
+    let alumnoSeleccionado = document.querySelector("#alumno_seleccion-estructura").value;
+    console.log(alumnoSeleccionado);
 
+    if ((alumnoSeleccionado === "1") || (alumnoSeleccionado === "2")) {
+        document.querySelector(".notas").style.display = "inline-block";
+    } else {
+        ((alumnoSeleccionado != "1") || (alumnoSeleccionado != "2"))
+        document.querySelector(".materia").value = "";
     }
 });
 // INGRESO DE NOTAS

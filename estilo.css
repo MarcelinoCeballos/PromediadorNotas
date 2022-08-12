@@ -29,7 +29,11 @@
     display: none;
     margin-top: 50px; 
 }
-.alumno {
+.alumnoPlantas {
+    display: none;
+    margin-top: 50px; 
+}
+.alumnoEstructura {
     display: none;
     margin-top: 50px; 
 }
@@ -42,5 +46,5 @@
     margin-top: 50px;
 }
 .fetch {
-    display: none;
+    display: inline-block;
 }
